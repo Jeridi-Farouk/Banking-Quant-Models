@@ -134,13 +134,13 @@ def calculate_beta():
         # 2) Rolling beta
         rolling_path = get_rolling_beta(stock_ticker, index_ticker)
 
-        # 🔥 SALVIAMO TUTTO NEI RESULTS
+        #SALVIAMO TUTTO NEI RESULTS
         results["beta"] = beta_value
         results["r2"] = r2
         results["beta_regression_path"] = beta_path
         results["rolling_beta_path"] = rolling_path
 
-        # 🔥 resettiamo la lista comparables
+        #resettiamo la lista comparables
         results["r2_list"] = {}
 
         return beta_value, r2
@@ -153,7 +153,7 @@ def calculate_beta():
 
         betas_unlevered = []
 
-        # 🔥 inizializziamo la lista degli R²
+        #inizializziamo la lista degli R²
         results["r2_list"] = {}
 
         for i in range(n):
@@ -169,7 +169,7 @@ def calculate_beta():
             # Rolling beta
             rolling_path = get_rolling_beta(comp_ticker, index_ticker)
 
-            # 🔥 SALVIAMO R² + GRAFICI PER OGNI COMPARABLE
+            #SALVIAMO R² + GRAFICI PER OGNI COMPARABLE
             results["r2_list"][comp_ticker] = {
                 "r2": r2_l,
                 "beta_path": beta_path,
@@ -195,7 +195,7 @@ def calculate_beta():
 
         print(f"\nFinal Levered Beta for Target Company: {beta_relevered:.4f}")
 
-        # 🔥 SALVIAMO NEI RESULTS
+        #SALVIAMO NEI RESULTS
         results["beta"] = beta_relevered
         results["r2"] = None  # compatibilità con deal_summary
         results["beta_regression_path"] = None

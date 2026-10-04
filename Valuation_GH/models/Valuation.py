@@ -153,7 +153,5 @@ def sensitivity_valuation(df, row_fcff, row_fcfe, wacc, ke, delta_list):
     print("\n--- SENSITIVITY TABLE ---")
     print(table)
 
-    # 🔥 SALVIAMO LA TABELLA ARROTONDATA
-    results["sensitivity_table"] = table
 
     return table
